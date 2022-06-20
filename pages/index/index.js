@@ -18,7 +18,7 @@ Page({
   },
   setNumber: function (e) {
     const number = e.currentTarget.dataset['number'];
-    const currentVal = parseFloat(this.data.currentVal) || '';
+    const currentVal = this.data.currentVal.toString() === '0' ? '' : this.data.currentVal;
     this.setData(
       {currentVal: currentVal + number}
     );
@@ -51,7 +51,7 @@ Page({
     const currentVal = this.data.currentVal;
     if (!currentVal) {
       this.setData(
-        {currentVal: this.data.currentVal + '0.'}
+        {currentVal: '0.'}
       );
     } if (currentVal.indexOf('.') === -1) {
       this.setData(
