@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view class="container">
+  <text class="show-value">{{currentVal}}</text>
+  <view class="action-container">
+    <view class="line">
+      <view class="set-button">
+        AC
+      </view>
+      <view class="set-button">
+        +/-
+      </view>
+      <view class="set-button">
+        %
+      </view>
+      <view class="action-button">
+        /
+      </view>
+    </view>
+    <view class="line">
+      <view class="number" data-number="7" bindtap="setNumber">
+        7
+      </view>
+      <view class="number" data-number="8" bindtap="setNumber">
+        8
+      </view>
+      <view class="number" data-number="9" bindtap="setNumber">
+        9
+      </view>
+      <view class="action-button">
+        *
+      </view>
+    </view>
+    <view class="line">
+      <view class="number" data-number="4" bindtap="setNumber">
+        4
+      </view>
+      <view class="number" data-number="5" bindtap="setNumber">
+        5
+      </view>
+      <view class="number" data-number="6" bindtap="setNumber">
+        6
+      </view>
+      <view class="action-button">
+        -
+      </view>
+    </view>
+    <view class="line">
+      <view class="number" data-number="1" bindtap="setNumber">
+        1
+      </view>
+      <view class="number" data-number="2" bindtap="setNumber">
+        2
+      </view>
+      <view class="number" data-number="3" bindtap="setNumber">
+        3
+      </view>
+      <view class="action-button">
+        +
+      </view>
+    </view>
+    <view class="line">
+      <view class="number zero"  data-number="0" bindtap="setNumber">
+        0
+      </view>
+      <view class="number" data-number="." bindtap="setNumber">
+        .
+      </view>
+      <view class="action-button">
+        =
+      </view>
+    </view>
+  </view>
+</view>
