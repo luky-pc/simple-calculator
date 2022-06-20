@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <text class="show-value">{{currentVal}}</text>
+  <view class="show-value">{{currentVal}}</view>
   <view class="action-container">
     <view class="line">
       <view class="set-button">
@@ -12,7 +12,7 @@
       <view class="set-button">
         %
       </view>
-      <view class="action-button">
+      <view class="action-button"  data-action="/" bindtap="setAction">
         /
       </view>
     </view>
@@ -26,7 +26,7 @@
       <view class="number" data-number="9" bindtap="setNumber">
         9
       </view>
-      <view class="action-button">
+      <view class="action-button" data-action="*" bindtap="setAction">
         *
       </view>
     </view>
@@ -40,7 +40,7 @@
       <view class="number" data-number="6" bindtap="setNumber">
         6
       </view>
-      <view class="action-button">
+      <view class="action-button"  data-action="-" bindtap="setAction">
         -
       </view>
     </view>
@@ -54,7 +54,7 @@
       <view class="number" data-number="3" bindtap="setNumber">
         3
       </view>
-      <view class="action-button">
+      <view class="action-button" data-action="+" bindtap="setAction">
         +
       </view>
     </view>
@@ -62,10 +62,10 @@
       <view class="number zero"  data-number="0" bindtap="setNumber">
         0
       </view>
-      <view class="number" data-number="." bindtap="setNumber">
+      <view class="number" bindtap="setDot">
         .
       </view>
-      <view class="action-button">
+      <view class="action-button" bindtap="calcResult">
         =
       </view>
     </view>
