@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    currentVal: '',
+    currentVal: 0,
     actionArr: [],
     numberArr: [],
   },
@@ -18,13 +18,42 @@ Page({
   },
   setNumber: function (e) {
     const number = e.currentTarget.dataset['number'];
+    const currentVal = parseFloat(this.data.currentVal) || '';
     this.setData(
-      {currentVal: this.data.currentVal + number}
+      {currentVal: currentVal + number}
+    );
+  },
+
+  clear: function () {
+    this.setData(
+      {
+        numberArr: [],
+        actionArr: [],
+        currentVal: 0,
+      }
+    );
+  },
+  percent: function() {
+    const currentVal = parseFloat(this.data.currentVal);
+    if (!currentVal) return;
+    this.setData(
+      { currentVal: currentVal / 100 }
+    );
+  },
+  reverse: function() {
+    const currentVal = parseFloat(this.data.currentVal);
+    if (!currentVal) return;
+    this.setData(
+      { currentVal: -currentVal }
     );
   },
   setDot: function () {
     const currentVal = this.data.currentVal;
-    if (currentVal.indexOf('.') === -1) {
+    if (!currentVal) {
+      this.setData(
+        {currentVal: this.data.currentVal + '0.'}
+      );
+    } if (currentVal.indexOf('.') === -1) {
       this.setData(
         {currentVal: this.data.currentVal + '.'}
       );

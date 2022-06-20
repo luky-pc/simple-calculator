@@ -3,17 +3,17 @@
   <view class="show-value">{{currentVal}}</view>
   <view class="action-container">
     <view class="line">
-      <view class="set-button">
+      <view class="set-button" bindtap="clear">
         AC
       </view>
-      <view class="set-button">
+      <view class="set-button" bindtap="reverse">
         +/-
       </view>
-      <view class="set-button">
+      <view class="set-button" bindtap="percent">
         %
       </view>
       <view class="action-button"  data-action="/" bindtap="setAction">
-        /
+        ÷
       </view>
     </view>
     <view class="line">
@@ -27,7 +27,7 @@
         9
       </view>
       <view class="action-button" data-action="*" bindtap="setAction">
-        *
+        x
       </view>
     </view>
     <view class="line">
